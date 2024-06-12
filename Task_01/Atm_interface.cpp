@@ -2,25 +2,19 @@
 using namespace std;
 #define ll long long int
 class ATM {
- // Private variables used inside class
 private:
     string name;
     ll accnumber;
     char type[10];
     ll amount = 0;
     ll tot = 0;
- 
-    // Public variables
-public:
-    // Function to set the person's data
+ public:
+
     void setvalue()
     {
         cout << "Enter name\n";
         cin.ignore();
- 
-        // To use space in string
         getline(cin, name);
- 
         cout << "Enter Account number\n";
         cin >> accnumber;
         cout << "Enter Account type\n";
@@ -28,8 +22,7 @@ public:
         cout << "Enter Balance\n";
         cin >> tot;
     }
- 
-    // Function to display the required data
+
     void showdata()
     {
         cout << "Name:" << name << endl;
@@ -37,22 +30,19 @@ public:
         cout << "Account type:" << type << endl;
         cout << "Balance:" << tot << endl;
     }
- 
-    // Function to deposit the amount in ATM
+
     void deposit()
     {
         cout << "\nEnter amount to be Deposited\n";
         cin >> amount;
     }
- 
-    // Function to show the balance amount
+
     void showbal()
     {
         tot = tot + amount;
         cout << "\nTotal balance is: " << tot;
     }
- 
-    // Function to withdraw the amount in ATM
+    
     void withdrawl()
     {
         int a, avai_balance;
@@ -62,17 +52,11 @@ public:
         cout << "Available Balance is" << avai_balance;
     }
 };
- 
-// Driver Code
+
 int main()
 {
-    // Object of class
     ATM b;
- 
     int choice;
- 
-    // Infinite while loop to choose
-    // options everytime
     while (1) {
         cout << "\n~~~~~~~~~~~~~~~~~~~~~~~~~~"
              << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
@@ -88,8 +72,6 @@ int main()
         cout << "\t5. Withdraw Money\n";
         cout << "\t6. Cancel\n";
         cin >> choice;
- 
-        // Choices to select from
         switch (choice) {
         case 1:
             b.setvalue();
